@@ -1,0 +1,18 @@
+---
+name: fish-lsp
+description: fish-shell LSP server.
+homepage: https://github.com/ndonfris/fish-lsp
+licenses:
+  - MIT
+languages:
+  - Fish
+categories:
+  - LSP
+source:
+  # renovate:datasource=git-refs
+  id: pkg:github/ndonfris/fish-lsp@c73c985ebc66e574026b29c5354c50b6a86832e0
+  build:
+    run: |
+      npm exec yarn@1 install
+bin:
+  fish-lsp: node:bin/fish-lsp

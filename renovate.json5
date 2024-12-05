@@ -1,0 +1,20 @@
+{
+  "customManagers": [
+    {
+      "customType": "regex",
+      "fileMatch": ["^package\\.yaml$"],
+      "matchStringsStrategy": "combination",
+      "matchStrings": [
+          "\n  id:\\s+pkg:github\\/(?<packageName>.+)@(?<currentDigest>.*?)\\n",
+          "\nname: (?<depName>.+)",
+          "# renovate:datasource=git-refs[\\s\\S]*pkg:github\\/(?<packageName>.+)@(?<currentDigest>[^\\s\\?#]+)",
+          "# renovate:.*versioning=(?<versioning>[^,\n]+)",
+          "# renovate:.*datasource=(?<datasource>[^,\n]+)"
+      ],
+      "currentValueTemplate": "master",
+      "depNameTemplate": "{{#if (containsString datasource 'git-refs')}}{{else}}{{{depName}}}{{/if}}",
+      "packageNameTemplate": "{{#if (containsString datasource 'git-refs')}}https://github.com/{{{packageName}}}{{else}}{{{packageName}}}{{/if}}",
+      "datasourceTemplate": "git-refs"
+    }
+  ]
+}

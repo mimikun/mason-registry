@@ -1,0 +1,7 @@
+#!/bin/bash
+# mise description="Lint by yamllint"
+# mise hide=true
+
+yamllint packages/
+
+# vim:ft=bash

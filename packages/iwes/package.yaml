@@ -1,0 +1,35 @@
+---
+name: iwes
+description: IWE LSP server
+homepage: https://iwe.md
+licenses:
+  - Apache-2.0
+languages:
+  - Markdown
+categories:
+  - LSP
+
+source:
+  id: pkg:github/com/iwe-org/iwe@v0.0.15
+  asset:
+    - target: darwin_arm64
+      file: iwe-{{ version }}-aarch64-apple-darwin.tar.gz
+      bin: iwes
+    - target: linux_arm64_gnu
+      file: iwe-{{ version }}-aarch64-unknown-linux-gnu.tar.gz
+      bin: iwes
+    - target: darwin_x64
+      file: iwe-{{ version }}-x86_64-apple-darwin.tar.gz
+      bin: iwes
+    - target: linux_x64_gnu
+      file: iwe-{{ version }}-x86_64-unknown-linux-gnu.tar.gz
+      bin: iwes
+    - target: darwin
+      file: iwe-{{ version }}-universal-apple-darwin.tar.gz
+      bin: iwes
+    - target: win_x64
+      file: iwe-{{ version }}-x86_64-pc-windows-msvc.zip
+      bin: iwes.exe
+
+bin:
+  iwes: "{{source.asset.bin}}"

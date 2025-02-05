@@ -25,6 +25,8 @@ require("mason").setup({
 
 ### [fish-lsp]
 
+### [iwes]
+
 ### [kulala-ls]
 
 ### [superhtml]
@@ -34,3 +36,4 @@ require("mason").setup({
 [fish-lsp]:https://github.com/ndonfris/fish-lsp
 [superhtml]:https://github.com/kristoff-it/superhtml
 [kulala-ls]:https://github.com/mistweaverco/kulala-ls
+[iwes]:https://github.com/iwe-org/iwe

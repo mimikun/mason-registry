@@ -9,7 +9,7 @@ languages:
 categories:
   - LSP
 source:
-  id: pkg:github/ndonfris/fish-lsp@v1.0.8-3
+  id: pkg:github/ndonfris/fish-lsp@v1.0.9
   build:
     run: |
       npm exec yarn@1 install
